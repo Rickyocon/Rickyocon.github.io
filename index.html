@@ -25,7 +25,17 @@
   </head>
 
   <body>
+    <div class="typewriter">
     <h1><center>BOHO+</center></h1>
+       <script>
+		    window.onload = function () {
+			  const theDelay = 5
+			  const timer = setTimeout('showText()', theDelay * 1000)
+		    }
+		    function showText() {
+			     document.getElementById('disclaimer').style.visibility = 'visible'
+		    }
+	  </script></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/addons/p5.sound.min.js"></script>
