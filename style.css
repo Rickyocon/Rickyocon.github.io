@@ -18,7 +18,7 @@ h1 {
   font-style: italic;
   color: #373fff;
   font-style: italic;
-  color: white;
+  color: black;
 }
 
 /* CSS files add styling rules to your content */
@@ -39,4 +39,19 @@ button:hover
 {
   background-color: #8B0000;
 }
+
+
+.typewriter h1 {
+		text-align: center;
+		color: #71cc00;
+		font-family: 'VT323', monospace;
+		font-size: 300%;
+		overflow: hidden;
+		border-right: 0.15em solid white;
+		white-space: nowrap;
+		margin: 10% auto;
+		letter-spacing: 0.15em;
+		animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
+		margin-bottom: 1%;
+	}
 
