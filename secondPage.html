@@ -1,312 +1,86 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movies & TV | BOHO+</title>
 
-:root {
-  --bg: #070b14;
-  --surface: rgba(17, 25, 40, 0.75);
-  --surface-border: rgba(255, 255, 255, 0.08);
-  --text: #f5f7ff;
-  --muted: #9ba6c7;
-  --accent: #5b8cff;
-  --accent-hover: #7aa2ff;
-  --danger: #ff5c7a;
-  --shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
-}
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+  <body>
+    <div class="page-wrapper">
+      <nav class="navbar">
+        <div class="logo">BOHO<span>+</span></div>
 
-html {
-  scroll-behavior: smooth;
-}
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="anime-page.html">Anime</a>
+          <a href="tutorial.html">Tutorial</a>
+        </div>
+      </nav>
 
-body {
-  font-family: "Inter", sans-serif;
-  background:
-    radial-gradient(
-      circle at top left,
-      rgba(91, 140, 255, 0.18),
-      transparent 30%
-    ),
-    radial-gradient(
-      circle at bottom right,
-      rgba(130, 80, 255, 0.12),
-      transparent 25%
-    ),
-    var(--bg);
-  color: var(--text);
-  min-height: 100vh;
-  padding: 40px 20px;
-}
+      <section class="hero">
+        <h1>Movies & TV</h1>
 
-.page-wrapper {
-  max-width: 1200px;
-  margin: auto;
-}
+        <p>
+          Multiple streaming sources available. If one source has issues, simply
+          try another.
+        </p>
+      </section>
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 50px;
-  padding: 18px 28px;
-  background: var(--surface);
-  border: 1px solid var(--surface-border);
-  backdrop-filter: blur(14px);
-  border-radius: 20px;
-  box-shadow: var(--shadow);
-}
+      <div class="warning">Some providers may contain ads or redirects.</div>
 
-.logo {
-  font-size: 1.8rem;
-  font-weight: 800;
-  letter-spacing: -1px;
-}
+      <section class="card-grid">
+        <div class="card">
+          <h2>sFlix</h2>
+          <p>Popular streaming platform for movies and TV shows.</p>
 
-.logo span {
-  color: var(--accent);
-}
+          <a class="external-link" href="https://sflix.to/" target="_blank">
+            <button>Open sFlix</button>
+          </a>
+        </div>
 
-.nav-links {
-  display: flex;
-  gap: 18px;
-}
+        <div class="card">
+          <h2>123 Movies</h2>
+          <p>Watch a large catalog of online movies and series.</p>
 
-.nav-links a {
-  color: var(--muted);
-  text-decoration: none;
-  transition: 0.25s ease;
-  font-weight: 500;
-}
+          <a
+            class="external-link"
+            href="https://ww9.0123movie.net/home.html"
+            target="_blank"
+          >
+            <button>Open 123 Movies</button>
+          </a>
+        </div>
 
-.nav-links a:hover {
-  color: white;
-}
+        <div class="card">
+          <h2>F Movies</h2>
+          <p>High-quality streaming and multiple media servers.</p>
 
-.hero {
-  text-align: center;
-  margin-bottom: 55px;
-}
+          <a
+            class="external-link"
+            href="https://ww4.fmovies.co/home/"
+            target="_blank"
+          >
+            <button>Open F Movies</button>
+          </a>
+        </div>
 
-.hero h1 {
-  font-size: clamp(2.7rem, 7vw, 5rem);
-  font-weight: 800;
-  letter-spacing: -3px;
-  margin-bottom: 18px;
-}
+        <div class="card">
+          <h2>Soap2Day</h2>
+          <p>Alternative streaming source for movies and TV.</p>
 
-.hero p {
-  max-width: 700px;
-  margin: auto;
-  color: var(--muted);
-  line-height: 1.7;
-  font-size: 1.05rem;
-}
-
-.warning {
-  margin: 30px auto;
-  padding: 16px 20px;
-  border-radius: 16px;
-  background: rgba(255, 92, 122, 0.1);
-  border: 1px solid rgba(255, 92, 122, 0.2);
-  color: #ff9db0;
-  max-width: 700px;
-  text-align: center;
-}
-
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 24px;
-  margin-top: 40px;
-}
-
-.card {
-  position: relative;
-  overflow: hidden;
-  background: var(--surface);
-  border: 1px solid var(--surface-border);
-  backdrop-filter: blur(14px);
-  border-radius: 24px;
-  padding: 28px;
-  transition: all 0.3s ease;
-  box-shadow: var(--shadow);
-}
-
-.card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(91, 140, 255, 0.08),
-    transparent 60%
-  );
-}
-
-.card:hover {
-  transform: translateY(-8px);
-  border-color: rgba(91, 140, 255, 0.35);
-}
-
-.card h2 {
-  font-size: 1.4rem;
-  margin-bottom: 12px;
-  position: relative;
-}
-
-.card p {
-  color: var(--muted);
-  line-height: 1.6;
-  margin-bottom: 24px;
-  position: relative;
-}
-
-.card a {
-  text-decoration: none;
-}
-
-.card button {
-  position: relative;
-  width: 100%;
-  border: none;
-  background: linear-gradient(135deg, var(--accent), #7b61ff);
-  color: white;
-  padding: 14px;
-  border-radius: 14px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.25s ease;
-}
-
-.card button:hover {
-  transform: scale(1.02);
-  background: linear-gradient(135deg, var(--accent-hover), #927cff);
-}
-
-.footer {
-  margin-top: 70px;
-  text-align: center;
-  color: var(--muted);
-  font-size: 0.95rem;
-  line-height: 1.8;
-}
-
-.tutorial-container {
-  max-width: 950px;
-  margin: auto;
-  background: var(--surface);
-  border: 1px solid var(--surface-border);
-  backdrop-filter: blur(14px);
-  border-radius: 24px;
-  padding: 40px;
-  box-shadow: var(--shadow);
-}
-
-.tutorial-container h1 {
-  margin-bottom: 20px;
-  font-size: 3rem;
-}
-
-.tutorial-container p {
-  color: var(--muted);
-  line-height: 1.9;
-  white-space: pre-line;
-}
-
-.back-button {
-  display: inline-block;
-  margin-top: 30px;
-  color: white;
-  text-decoration: none;
-  background: rgba(255, 255, 255, 0.08);
-  padding: 12px 18px;
-  border-radius: 12px;
-  transition: 0.25s ease;
-}
-
-.back-button:hover {
-  background: rgba(255, 255, 255, 0.14);
-}
-
-@media (max-width: 768px) {
-  body {
-    padding: 20px 16px;
-  }
-
-  .navbar {
-    flex-direction: column;
-    gap: 14px;
-  }
-
-  .hero h1 {
-    line-height: 1.05;
-  }
-
-  .tutorial-container {
-    padding: 24px;
-  }
-}
-
-.tutorial-content {
-  margin-top: 40px;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-.tutorial-step {
-  display: flex;
-  gap: 22px;
-  align-items: flex-start;
-  padding: 24px;
-  border-radius: 20px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  transition: 0.25s ease;
-}
-
-.tutorial-step:hover {
-  transform: translateY(-4px);
-  background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(91, 140, 255, 0.25);
-}
-
-.tutorial-step span {
-  min-width: 58px;
-  height: 58px;
-  border-radius: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  font-size: 1.1rem;
-  background: linear-gradient(135deg, #5b8cff, #7b61ff);
-  color: white;
-  box-shadow: 0 10px 25px rgba(91, 140, 255, 0.25);
-}
-
-.tutorial-step h3 {
-  margin-bottom: 10px;
-  font-size: 1.2rem;
-  color: white;
-}
-
-.tutorial-step p {
-  color: var(--muted);
-  line-height: 1.8;
-}
-
-@media (max-width: 768px) {
-  .tutorial-step {
-    flex-direction: column;
-  }
-
-  .tutorial-step span {
-    min-width: 52px;
-    height: 52px;
-  }
-}
+          <a
+            class="external-link"
+            href="https://ww25.soap2day.day/"
+            target="_blank"
+          >
+            <button>Open Soap2Day</button>
+          </a>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
