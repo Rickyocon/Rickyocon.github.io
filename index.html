@@ -1,131 +1,114 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BOHO+</title>
 
-    <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" href="/style.css" />
-    <link
-      href="https://cdn.glitch.global/9ca90831-e1aa-41b9-b5b3-b2e2d855144d/apple-touch-icon.png?v=1652216547780"
-      rel="apple-touch-icon"
-    />
-    <link
-      rel="icon"
-      type="png"
-      href="https://cdn.glitch.global/9ca90831-e1aa-41b9-b5b3-b2e2d855144d/apple-touch-icon.png?v=1652216547780"
-    />
-
-    <!-- import the webpage's javascript file -->
-    <script src="/script.js" defer></script>
-    <link rel="java script.js" href="/script.js" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
   </head>
 
   <body>
-    <h1><center>BOHO+</center></h1>
+    <div class="page-wrapper">
+      <nav class="navbar">
+        <div class="logo">BOHO<span>+</span></div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/addons/p5.sound.min.js"></script>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="secondPage.html">Movies & TV</a>
+          <a href="anime-page.html">Anime</a>
+          <a href="tutorial.html">Tutorial</a>
+        </div>
+      </nav>
 
-    <p>
-      <center>
-        This Website is a collection of popular torenting websites, all put into
-        one convenient place!
-      </center>
-    </p>
+      <section class="hero">
+        <h1>All Your Streaming Links In One Place</h1>
 
-    <div class="warning">
-      <p>WARNING: There may be inappropriate ads</p>
+        <p>
+          A sleek and organized collection of streaming, anime, sports,
+          television, and media resources — built for speed, simplicity, and a
+          modern viewing experience.
+        </p>
+      </section>
+
+      <div class="warning">
+        Warning: External sites may contain ads, redirects, or popups. Use an
+        ad-blocker for the best experience.
+      </div>
+
+      <section class="card-grid">
+        <div class="card">
+          <h2>Collections</h2>
+          <p>Browse curated streaming and media collections.</p>
+
+          <a class="external-link" href="https://fmhy.net/" target="_blank">
+            <button>Open Collections</button>
+          </a>
+        </div>
+
+        <div class="card">
+          <h2>Movies & TV</h2>
+          <p>Watch movies and television using multiple sources.</p>
+
+          <a href="secondPage.html">
+            <button>Browse Movies</button>
+          </a>
+        </div>
+
+        <div class="card">
+          <h2>Anime</h2>
+          <p>Stream anime using several popular providers.</p>
+
+          <a href="anime-page.html">
+            <button>Open Anime</button>
+          </a>
+        </div>
+
+        <div class="card">
+          <h2>Sports</h2>
+          <p>Live sports streams and sports coverage access.</p>
+
+          <a
+            class="external-link"
+            href="https://sportyhunter.com/"
+            target="_blank"
+          >
+            <button>Watch Sports</button>
+          </a>
+        </div>
+
+        <div class="card">
+          <h2>FOX Live</h2>
+          <p>Access FOX live streaming coverage.</p>
+
+          <a
+            class="external-link"
+            href="https://streamfare.com/live-now-fox-live-stream.html"
+            target="_blank"
+          >
+            <button>Open FOX</button>
+          </a>
+        </div>
+
+        <div class="card">
+          <h2>CNN Live</h2>
+          <p>Live CNN streaming and news coverage.</p>
+
+          <a
+            class="external-link"
+            href="https://livenewsof.com/free-cnn-stream/"
+            target="_blank"
+          >
+            <button>Open CNN</button>
+          </a>
+        </div>
+      </section>
+
+      <div class="footer">
+        BOHO+ • Modern Media Hub <br />
+        Optimized for desktop and mobile viewing
+      </div>
     </div>
-
-    <p><center>CLICK ONE OF THE BUTTONS BELOW AND ENJOY! <a href="tutorial.html">Click here for Tutorial</a></center></p>
-
-    <!-- target="_blank" allows page to redirect using a new tab -->
-    
-    <br />
-
-    <a href="https://fmhy.net/" target="_self"
-      ><center>
-        <button>Collections</button>
-      </center>
-    </a>
-    <br />
-
-    <a href="secondPage.html" target="_self"
-      ><center>
-        <button>Movies & Tv</button>
-      </center>
-    </a>
-
-    <br />
-
-    <a href="anime-page.html" target="_self"
-      ><center>
-        <button>Anime</button>
-      </center>
-    </a>
-    <br />
-
-    <a href="https://sportyhunter.com/" target="_blank"
-      ><center>
-        <button>Sports</button>
-      </center>
-    </a>
-
-    <br />
-
-    <a
-      href="https://streamfare.com/live-now-fox-live-stream.html"
-      target="_blank"
-    >
-      <center>
-        <button>FOX</button>
-      </center>
-    </a>
-
-    <br />
-
-    <a href="https://livenewsof.com/free-cnn-stream/" target="_blank">
-      <center>
-        <button>CNN</button>
-      </center>
-    </a>
-    <br />
-
-    <p>
-      <center>
-        I highly recommend using a ad-blocker! <br /><br />
-        Otherwise just close out any pop ups and if you are ever redirected
-        during the use of one these sites, close the redirected tab and resume
-        use!
-      </center>
-    </p>
   </body>
-
-  <script>
-    function myFunction() {
-      alert(
-        "Warning: This site contains inappropriate ads! Click ok or close to continue"
-      );
-    }
-  </script>
-
-  <style>
-    Button {
-      /* Set the background color to a shade of green */
-      background: red;
-      /* Center-align the text */
-      text-align: center;
-      /* Set the cursor to be a pointer */
-      cursor: pointer;
-    }
-
-    .warning {
-      color: yellow;
-      text-align: center;
-    }
-  </style>
 </html>
