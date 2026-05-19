@@ -1,57 +1,312 @@
-/* CSS files add styling rules to your content */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+
+:root {
+  --bg: #070b14;
+  --surface: rgba(17, 25, 40, 0.75);
+  --surface-border: rgba(255, 255, 255, 0.08);
+  --text: #f5f7ff;
+  --muted: #9ba6c7;
+  --accent: #5b8cff;
+  --accent-hover: #7aa2ff;
+  --danger: #ff5c7a;
+  --shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
-  background-color: black; /* Used if the image is unavailable */
-  height: 500px; /* You must set a specified height */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
+  scroll-behavior: smooth;
 }
 
 body {
-  margin: 2em;
-  font-family: helvetica, arial, sans-serif;
-  margin: 2em;
-  opacity: 100;
+  font-family: "Inter", sans-serif;
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(91, 140, 255, 0.18),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(130, 80, 255, 0.12),
+      transparent 25%
+    ),
+    var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  padding: 40px 20px;
 }
 
-h1 {
-  font-style: italic;
-  color: #373fff;
-  font-style: italic;
+.page-wrapper {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+  padding: 18px 28px;
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  backdrop-filter: blur(14px);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.logo span {
+  color: var(--accent);
+}
+
+.nav-links {
+  display: flex;
+  gap: 18px;
+}
+
+.nav-links a {
+  color: var(--muted);
+  text-decoration: none;
+  transition: 0.25s ease;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
   color: white;
 }
 
-/* CSS files add styling rules to your content */
+.hero {
+  text-align: center;
+  margin-bottom: 55px;
+}
 
-center {
+.hero h1 {
+  font-size: clamp(2.7rem, 7vw, 5rem);
+  font-weight: 800;
+  letter-spacing: -3px;
+  margin-bottom: 18px;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: auto;
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+.warning {
+  margin: 30px auto;
+  padding: 16px 20px;
+  border-radius: 16px;
+  background: rgba(255, 92, 122, 0.1);
+  border: 1px solid rgba(255, 92, 122, 0.2);
+  color: #ff9db0;
+  max-width: 700px;
+  text-align: center;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  backdrop-filter: blur(14px);
+  border-radius: 24px;
+  padding: 28px;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(91, 140, 255, 0.08),
+    transparent 60%
+  );
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(91, 140, 255, 0.35);
+}
+
+.card h2 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.card p {
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.card a {
+  text-decoration: none;
+}
+
+.card button {
+  position: relative;
+  width: 100%;
+  border: none;
+  background: linear-gradient(135deg, var(--accent), #7b61ff);
+  color: white;
+  padding: 14px;
+  border-radius: 14px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.card button:hover {
+  transform: scale(1.02);
+  background: linear-gradient(135deg, var(--accent-hover), #927cff);
+}
+
+.footer {
+  margin-top: 70px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.tutorial-container {
+  max-width: 950px;
+  margin: auto;
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  backdrop-filter: blur(14px);
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: var(--shadow);
+}
+
+.tutorial-container h1 {
+  margin-bottom: 20px;
+  font-size: 3rem;
+}
+
+.tutorial-container p {
+  color: var(--muted);
+  line-height: 1.9;
+  white-space: pre-line;
+}
+
+.back-button {
+  display: inline-block;
+  margin-top: 30px;
+  color: white;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 12px 18px;
+  border-radius: 12px;
+  transition: 0.25s ease;
+}
+
+.back-button:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 20px 16px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .hero h1 {
+    line-height: 1.05;
+  }
+
+  .tutorial-container {
+    padding: 24px;
+  }
+}
+
+.tutorial-content {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.tutorial-step {
+  display: flex;
+  gap: 22px;
+  align-items: flex-start;
+  padding: 24px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: 0.25s ease;
+}
+
+.tutorial-step:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(91, 140, 255, 0.25);
+}
+
+.tutorial-step span {
+  min-width: 58px;
+  height: 58px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  background: linear-gradient(135deg, #5b8cff, #7b61ff);
+  color: white;
+  box-shadow: 0 10px 25px rgba(91, 140, 255, 0.25);
+}
+
+.tutorial-step h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
   color: white;
 }
 
-button {
-  height: 50px;
-  width: 300px;
-  border-radius: 8px;
-  color: white;
-  font-size: 20px;
+.tutorial-step p {
+  color: var(--muted);
+  line-height: 1.8;
 }
 
-button:hover
-{
-  background-color: #8B0000;
+@media (max-width: 768px) {
+  .tutorial-step {
+    flex-direction: column;
+  }
+
+  .tutorial-step span {
+    min-width: 52px;
+    height: 52px;
+  }
 }
-
-
-.typewriter h1 {
-		text-align: center;
-		color: #71cc00;
-		font-family: 'VT323', monospace;
-		font-size: 300%;
-		overflow: hidden;
-		border-right: 0.15em solid white;
-		white-space: nowrap;
-		margin: 10% auto;
-		letter-spacing: 0.15em;
-		animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
-		margin-bottom: 1%;
-	}
-
